@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /dev_plan/
+Sitemap: https://deadpixeltests.org/sitemap.xml

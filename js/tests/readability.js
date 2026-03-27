@@ -38,7 +38,7 @@ export default class ReadabilityTest extends BaseTest {
         content.style.gap = '20px';
 
         const sizes = [10, 11, 12, 14, 18, 24, 32];
-        const sentence = "다람쥐 헌 쳇바퀴에 타고파. The quick brown fox jumps over the lazy dog. 1234567890";
+        const sentence = this.t('readability_sentence');
 
         sizes.forEach(size => {
             const row = document.createElement('div');

@@ -10,6 +10,7 @@ export default class PixelFixerTest extends BaseTest {
         // Use a canvas for high-performance random noise
         this.canvas = null;
         this.ctx = null;
+        this.handleResize = this.handleResize.bind(this);
     }
 
     start() {
@@ -29,7 +30,7 @@ export default class PixelFixerTest extends BaseTest {
         this.ctx = this.canvas.getContext('2d');
 
         // Handle resize
-        window.addEventListener('resize', this.handleResize.bind(this));
+        window.addEventListener('resize', this.handleResize);
 
         this.isRunning = true;
         this.animate();
@@ -43,7 +44,7 @@ export default class PixelFixerTest extends BaseTest {
         if (this.animationId) {
             cancelAnimationFrame(this.animationId);
         }
-        window.removeEventListener('resize', this.handleResize.bind(this));
+        window.removeEventListener('resize', this.handleResize);
         super.cleanup();
     }
 
